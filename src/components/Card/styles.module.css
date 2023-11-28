@@ -42,3 +42,7 @@
 	width: max-content;
 	padding: 2px 0px;
 }
+
+.title {
+	font-weight: 400;
+}
