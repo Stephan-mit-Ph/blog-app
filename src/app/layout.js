@@ -9,13 +9,29 @@ import AuthProvider from '@/providers/AuthProvider';
 const montserrat = Montserrat({ subsets: ['latin'] });
 
 export const metadata = {
-	title: 'Lama Dev Blog App',
-	description: 'The best blog app!',
+	title: 'phBlog - The best blog app!',
+	description: 'phBlog is the best blog app in the world!',
 };
 
 export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
+			<head>
+				<meta
+					name='viewport'
+					content='width=device-width, initial-scale=1.0'
+				/>
+				<meta charSet='UTF-8' />
+				<meta
+					name='description'
+					content={metadata.description}
+				/>
+				<title>{metadata.title}</title>
+				<link
+					rel='icon'
+					href='/favicon.ico'
+				/>
+			</head>
 			<body className={montserrat.className}>
 				<AuthProvider>
 					<ThemeContextProvider>

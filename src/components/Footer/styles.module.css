@@ -21,7 +21,8 @@
 }
 
 .logoText {
-	font-size: 24px;
+	font-size: 1.8rem;
+	font-weight: 500;
 }
 
 .desc {

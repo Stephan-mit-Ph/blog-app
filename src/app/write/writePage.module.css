@@ -1,0 +1,85 @@
+.container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.select {
+	margin-bottom: 50px;
+	padding: 10px 20px;
+	margin-left: 50px;
+	width: max-content;
+}
+
+.editor {
+	display: flex;
+	gap: 20px;
+	height: 700px;
+	position: relative;
+}
+
+.button,
+.addButton {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 1px solid var(--textColor);
+	color: var(--textColor);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.addButton {
+	border-color: var(--textColor);
+	color: var(--textColor);
+}
+
+.add {
+	display: flex;
+	gap: 20px;
+	background-color: var(--bg);
+	position: absolute;
+	z-index: 999;
+	width: 100%;
+	left: 50px;
+}
+
+.input {
+	padding: 50px;
+	font-size: 64px;
+	font-weight: 400;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	color: var(--textColor);
+}
+
+.input::placeholder {
+	color: var(--textColor);
+}
+
+.textArea {
+	width: 100%;
+	font-weight: 300;
+}
+
+.publish {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 10px 20px;
+	border: none;
+	background-color: transparent;
+	color: var(--textColor);
+	border: 1px solid var(--textColor);
+	cursor: pointer;
+	border-radius: 20px;
+}
+
+.icon {
+	color: var(--textColor);
+	font-size: 1rem;
+}

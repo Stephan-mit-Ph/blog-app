@@ -1,9 +1,9 @@
 'use client';
 
-import Image from 'next/image';
 import styles from './styles.module.css';
 import { useContext } from 'react';
 import { ThemeContext } from '@/context/ThemeContext';
+import { Moon, Sun } from '@/components/Icons';
 
 const ThemeToggle = () => {
 	const { toggle, theme } = useContext(ThemeContext);
@@ -12,16 +12,22 @@ const ThemeToggle = () => {
 		<div
 			className={styles.container}
 			onClick={toggle}
-			style={theme === 'dark' ? { backgroundColor: 'white' } : { backgroundColor: '#0f172a' }}
+			style={
+				theme === 'dark'
+					? { backgroundColor: 'white', color: '#0f172a' }
+					: { backgroundColor: '#0f172a', color: 'white' }
+			}
 		>
-			<Image src='/moon.png' alt='' width={14} height={14} />
+			<Moon className={styles.icon} />
 			<div
 				className={styles.ball}
 				style={
-					theme === 'dark' ? { left: 1, background: '#0f172a' } : { right: 1, background: 'white' }
+					theme === 'dark'
+						? { left: 1, background: '#0f172a', color: 'white' }
+						: { right: 1, background: 'white', color: '#0f172a' }
 				}
 			></div>
-			<Image src='/sun.png' alt='' width={14} height={14} />
+			<Sun />
 		</div>
 	);
 };
