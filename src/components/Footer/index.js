@@ -1,25 +1,23 @@
 import styles from './styles.module.css';
-import Image from 'next/image';
 import Link from 'next/link';
+import { Instagram, Facebook, Tiktok, Youtube } from '@/components/Icons';
 
 const Footer = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.info}>
 				<div className={styles.logo}>
-					
 					<h1 className={styles.logoText}>phBlog</h1>
 				</div>
 				<p className={styles.desc}>
 					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim necessitatibus similique
-					aspernatur obcaecati veritatis. Aperiam cum porro sequi, totam minima consequuntur,
-					aspernatur deleniti vero repellendus dorales.
+					aspernatur obcaecati veritatis.
 				</p>
 				<div className={styles.icons}>
-					<Image src='/facebook.png' alt='' width={18} height={18} />
-					<Image src='/instagram.png' alt='' width={18} height={18} />
-					<Image src='/tiktok.png' alt='' width={18} height={18} />
-					<Image src='/youtube.png' alt='' width={18} height={18} />
+					<Instagram />
+					<Facebook />
+					<Tiktok />
+					<Youtube />
 				</div>
 			</div>
 			<div className={styles.links}>

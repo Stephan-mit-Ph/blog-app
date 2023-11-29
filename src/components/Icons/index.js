@@ -1,0 +1,10 @@
+export { default as Facebook } from './Facebook';
+export { default as Instagram } from './Instagram';
+export { default as Tiktok } from './Tiktok';
+export { default as Youtube } from './Youtube';
+export { default as External } from './External';
+export { default as Moon } from './Moon';
+export { default as Plus } from './Plus';
+export { default as Sun } from './Sun';
+export { default as Video } from './Video';
+export { default as Img } from "./Img";
