@@ -1,4 +1,3 @@
-
 import styles from './styles.module.css';
 import Link from 'next/link';
 import AuthLinks from '@/components/AuthLinks';
@@ -14,7 +13,9 @@ const Navbar = () => {
 				<Tiktok />
 				<Youtube />
 			</div>
-			<div className={styles.logo}>phBlog</div>
+			<div className={styles.logo}>
+				<Link href='/'>phBlog</Link>
+			</div>
 			<div className={styles.links}>
 				<ThemeToggle />
 				<Link
