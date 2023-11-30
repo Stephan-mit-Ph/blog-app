@@ -1,15 +1,17 @@
 'use client';
 
-import styles from './writePage.module.css';
+import { External, Img, Plus, Video } from '@/components/Icons';
+import { app } from '@/utils/firebase';
+import { getDownloadURL, getStorage, ref, uploadBytesResumable } from 'firebase/storage';
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import 'react-quill/dist/quill.bubble.css';
-import { useRouter } from 'next/navigation';
-import { useSession } from 'next-auth/react';
-import { Video, Plus, External, Img } from '@/components/Icons';
-import ReactQuill from 'react-quill';
+import styles from './writePage.module.css';
 
 const WritePage = () => {
 	const { status } = useSession();
+	const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 	const router = useRouter();
 
 	const [open, setOpen] = useState(false);
@@ -20,6 +22,7 @@ const WritePage = () => {
 	const [catSlug, setCatSlug] = useState('');
 
 	useEffect(() => {
+		const storage = getStorage(app);
 		const upload = () => {
 			const name = new Date().getTime() + file.name;
 			const storageRef = ref(storage, name);
@@ -76,7 +79,7 @@ const WritePage = () => {
 				desc: value,
 				img: media,
 				slug: slugify(title),
-				catSlug: catSlug || 'style',
+				catSlug: catSlug || 'style', //If not selected, choose the general category
 			}),
 		});
 
@@ -122,14 +125,14 @@ const WritePage = () => {
 						/>
 						<button className={styles.addButton}>
 							<label htmlFor='image'>
-								<Img className={styles.icon} />
+								<Img />
 							</label>
 						</button>
 						<button className={styles.addButton}>
-							<External className={styles.icon} />
+							<External />
 						</button>
 						<button className={styles.addButton}>
-							<Video className={styles.icon} />
+							<Video />
 						</button>
 					</div>
 				)}

@@ -5,16 +5,25 @@ import styles from './styles.module.css';
 const MenuPosts = ({ withImage }) => {
 	return (
 		<div className={styles.items}>
-			<Link href='/' className={styles.item}>
+			<Link
+				href='/blog?cat=travel'
+				className={styles.item}
+			>
 				{withImage && (
 					<div className={styles.imageContainer}>
-						<Image src='/p1.jpeg' alt='' fill className={styles.image} />
+						<Image
+							src='/travel.png'
+							alt=''
+							fill
+							className={styles.image}
+							sizes='(min-width: 1560px) 66px, (min-width: 1520px) calc(50vw - 704px), (min-width: 1300px) calc(2vw + 26px), 37px'
+						/>
 					</div>
 				)}
 				<div className={styles.textContainer}>
 					<span className={`${styles.category} ${styles.travel}`}>Travel</span>
 					<h3 className={styles.postTitle}>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Beyond Borders: Exploring Hidden Gems in Uncharted Destinations
 					</h3>
 					<div className={styles.detail}>
 						<span className={styles.username}>John Doe</span>
@@ -22,16 +31,25 @@ const MenuPosts = ({ withImage }) => {
 					</div>
 				</div>
 			</Link>
-			<Link href='/' className={styles.item}>
+			<Link
+				href='/blog?cat=culture'
+				className={styles.item}
+			>
 				{withImage && (
 					<div className={styles.imageContainer}>
-						<Image src='/p1.jpeg' alt='' fill className={styles.image} />
+						<Image
+							src='/culture.png'
+							alt=''
+							fill
+							className={styles.image}
+							sizes='(min-width: 1560px) 66px, (min-width: 1520px) calc(50vw - 704px), (min-width: 1300px) calc(2vw + 26px), 37px'
+						/>
 					</div>
 				)}
 				<div className={styles.textContainer}>
 					<span className={`${styles.category} ${styles.culture}`}>Culture</span>
 					<h3 className={styles.postTitle}>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Cultural Fusion: Embracing Diversity for a Global Tapestry
 					</h3>
 					<div className={styles.detail}>
 						<span className={styles.username}>John Doe</span>
@@ -39,16 +57,25 @@ const MenuPosts = ({ withImage }) => {
 					</div>
 				</div>
 			</Link>
-			<Link href='/' className={styles.item}>
+			<Link
+				href='/blog?cat=food'
+				className={styles.item}
+			>
 				{withImage && (
 					<div className={styles.imageContainer}>
-						<Image src='/p1.jpeg' alt='' fill className={styles.image} />
+						<Image
+							src='/food.png'
+							alt=''
+							fill
+							className={styles.image}
+							sizes='(min-width: 1560px) 66px, (min-width: 1520px) calc(50vw - 704px), (min-width: 1300px) calc(2vw + 26px), 37px'
+						/>
 					</div>
 				)}
 				<div className={styles.textContainer}>
 					<span className={`${styles.category} ${styles.food}`}>Food</span>
 					<h3 className={styles.postTitle}>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Culinary Adventures: Bringing Global Flavors to Your Kitchen
 					</h3>
 					<div className={styles.detail}>
 						<span className={styles.username}>John Doe</span>
@@ -56,16 +83,25 @@ const MenuPosts = ({ withImage }) => {
 					</div>
 				</div>
 			</Link>
-			<Link href='/' className={styles.item}>
+			<Link
+				href='/blog?cat=fashion'
+				className={styles.item}
+			>
 				{withImage && (
 					<div className={styles.imageContainer}>
-						<Image src='/p1.jpeg' alt='' fill className={styles.image} />
+						<Image
+							src='/fashion.png'
+							alt=''
+							fill
+							className={styles.image}
+							sizes='(min-width: 1560px) 66px, (min-width: 1520px) calc(50vw - 704px), (min-width: 1300px) calc(2vw + 26px), 37px'
+						/>
 					</div>
 				)}
 				<div className={styles.textContainer}>
 					<span className={`${styles.category} ${styles.fashion}`}>Fashion</span>
 					<h3 className={styles.postTitle}>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Trendspotting: Navigating the Hottest Fashion Trends of the Season
 					</h3>
 					<div className={styles.detail}>
 						<span className={styles.username}>John Doe</span>
